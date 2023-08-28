@@ -61,7 +61,8 @@ This HIP proposes to increase the witnesses per beacon to 25. This number can be
 The primary arguments which have been made against these ideas to date are -
 1. Pushback from those negatively impacted.
 Our conention is that Proof Of Coverage rewards need to be aligned with useful coverage. Providing lower level coverage to an area as small as a Res8 that already has 4 better performing hotspots does not add any value to the network and therefore should not be rewarded.
-2. People will lie about their location.
+Those hosts will have the option to move, sell their equipment or turn off. Any of those options will achieve the outcome sort in this HIP.
+3. People will lie about their location.
 This happens already, while this HIP may provide some added incentive to do so, the effects will be limited. Those who are in a saturated Res8 which happen to be very close to a vacant spot may move their location a short distance and evade the limit.
 Our contention is that such a short move is not significant, the unit would be close enough to actually be providing coverage to that area so we do not see any issue with this.
 In the cases that this HIP is targeting, where you have a city area filled with Res8's with double digit coverage throughout, a host would need to move miles away from their true location to achieve this effect. These units would be caught out by the denylist algorithms. 
