@@ -11,7 +11,7 @@
 
 This HIP proposes to- 
 1. Establish a scoring metric based on a number of criteria to provide a coverage score for IOT Hotspots.
-2. Set a hard limit per Res8 Hex, Hotspots within that Hex will be ranked based on the 'Coverage Score'. Those below the cut off will not be rewarded.
+2. Set a hard limit per Res8 Hex (or equivalent K-Ring), Hotspots within that Hex will be ranked based on the 'Coverage Score'. Those below the cut off will not be rewarded.
 3. Increase witnesses per beacon to 25. 
 
 <!-- Read the content requests in all sections before starting to write any section. -->
