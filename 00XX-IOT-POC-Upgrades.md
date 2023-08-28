@@ -51,7 +51,7 @@ This number can be adjusted if required
 
 **Witness limit per beacon**
 
-Witnesses per beacon were reduced due to load on the Helium blockchain, with the move to Solana, this is no longer required. By reducing over density it becomes viable to increase this limit. This also helps to aleviate some of the concerns by hotspots which are 'bridging' areas of density and less dense areas which were negatively affected by HIP 83.
+Witnesses per beacon were reduced due to load on the Helium blockchain, with the move to Solana, this is no longer required. By reducing over density it becomes viable to increase this limit. This also helps to aleviate some of the concerns by hotspots which are 'bridging' areas of density and less dense areas which were negatively affected by HIP 83. By providing better incentives to those bridging units we expect network growth on the outskirts of city areas will be encouraged.
 
 This HIP proposes to increase the witnesses per beacon to 25. This number can be further increased in the future after evaluation.
 
