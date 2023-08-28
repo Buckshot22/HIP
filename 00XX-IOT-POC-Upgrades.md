@@ -37,7 +37,7 @@ The metrics used to measure the 'Coverage Score' effectively create an 'SLA' whi
 
 The Coverage Score will be determined by the following metrics in weighted order
 
-- Number of unique valid witnesses over the past 48 Hours
+- Number of unique valid witnesses over the past 14 days
 - Measure of uptime over the previous 14 days
 - Average response time over the previous 14 days
 - Length of time that the unit has remained in location
