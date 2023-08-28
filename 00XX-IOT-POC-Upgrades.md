@@ -1,52 +1,85 @@
 # IOT POC Upgrades
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
+- Author(s): @Buckshot22
+- Start Date: 2023-08-28
 - Category: <!-- economic, technical, meta -->
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: <!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Vote Requirements: VeIOT
 
 ## Summary
 
-One paragraph explanation of the proposal.
+This HIP proposes to- 
+1. Establish a scoring metric based on a number of criteria to provide a coverage score for IOT Hotspots.
+2. Set a hard limit per Res8 Hex, Hotspots within that Hex will be ranked based on the 'Coverage Score'. Those below the cut off will not be rewarded.
+3. Increase witnesses per beacon to 25. 
 
 <!-- Read the content requests in all sections before starting to write any section. -->
 
 ## Motivation
 
-- Why are we doing this?
-- What use cases does it support?
-- What problems does it solve?
-- What is the expected outcome?
+The Helium network has had an incredible growth in numbers of hotspots through it's early years, however one issue is that the bulk of these units are clustered in city centers, providing little utility, while large areas of the world remain with insufficient coverage.
+
+For data usage to grow, we need to encourage better placement of Hotspots and discourage the clustering of large numbers in city centers. 
+HIP 17 attempted to achieve this, however is overly complex and poorly understood by many and has failed to have any significant effect on this issue.
+
+The metrics used to measure the 'Coverage Score' effectively create an 'SLA' which will help to provide a level of assurance to companies, organisations and individuals wanting to utilise the network for sensor usage.
 
 ## Stakeholders
 
-- Who is affected by this HIP? A stakeholder is any individual, group, or party such as network
-  users, Hotspot hosts, or token holders.
-- How are we soliciting feedback on this HIP from these stakeholders? Note that they may not be
-  watching the HIP repository or even directly active in the Helium Community chat channels.
+- Hotspot hosts
+- Investors
+- Network users.
 
 ## Detailed Explanation
 
-- Introduce and explain new concepts.
-- It should be reasonably clear how the proposal would be implemented.
-- Provide representative examples that show how this proposal would be commonly used.
-- Corner cases should be dissected by example.
+**Coverage Score**
+
+The Coverage Score will be determined by the following metrics in weighted order
+
+- Number of unique valid witnesses over the past 48 Hours
+- Measure of uptime over the previous 14 days
+- Average response time over the previous 14 days
+- Length of time that the unit has remained in location
+- HNT/IOT staking 
+
+**Res8 Limit**
+
+Proposal is to set the initial Res8 limit at 4. 
+If there are more than 4 Hotspots in any Res8, only the 4 with the highest Coverage Score will be rewarded for POC activities.
+This number can be adjusted if required
+
+**Witness limit per beacon**
+
+Witnesses per beacon were reduced due to load on the Helium blockchain, with the move to Solana, this is no longer required. By reducing over density it becomes viable to increase this limit. This also helps to aleviate some of the concerns by hotspots which are 'bridging' areas of density and less dense areas which were negatively affected by HIP 83.
+
+This HIP proposes to increase the witnesses per beacon to 25. This number can be further increased in the future after evaluation.
+
 
 ## Drawbacks
 
-- Why should we _not_ do this?
-- What problems could occur if we do this?
+The primary arguments which have been made against these ideas to date are -
+1. Pushback from those negatively impacted.
+Our conention is that Proof Of Coverage rewards need to be aligned with useful coverage. Providing lower level coverage to an area as small as a Res8 that already has 4 better performing hotspots does not add any value to the network and therefore should not be rewarded.
+2. People will lie about their location.
+This happens already, while this HIP may provide some added incentive to do so, the effects will be limited. Those who are in a saturated Res8 which happen to be very close to a vacant spot may move their location a short distance and evade the limit.
+Our contention is that such a short move is not significant, the unit would be close enough to actually be providing coverage to that area so we do not see any issue with this.
+In the cases that this HIP is targeting, where you have a city area filled with Res8's with double digit coverage throughout, a host would need to move miles away from their true location to achieve this effect. These units would be caught out by the denylist algorithms. 
+
 
 ## Rationale and Alternatives
 
-This is your chance to discuss your proposal in the context of the whole design space. This is
-probably the most important section!
+The HIP authors believe that by introducing these changes, it will force improvements to the spread of coverage while maintaining sufficiant redundancy for the network. By improving coverage and providing an SLA score it will improve dependability in the eyes of potential data customers.
 
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+It is expected that there will be pushback from those who stand to be caught out by this HIP due to providing superfluous coverage which is not adding value to the network.
+It is the authors belief that Proof Of Coverage rewards should only be provided to those providing valuable coverage. Providing lower level coverage to an area as small as a Res8 that already has 4 better performing hotspots does not add any value to the network.
+
+Hotspot Operators who are negatively affected by this change are likely to-
+1. Move their hotspot - More likely to happen if it is a hosted unit, the preferred behaviour is that units are moved to a less saturated area.
+2. Sell their hotspot - Users who have a hotspot at home and with no other hosting options would be likely to sell their unit. This has the same positive effect as moving.
+3. Improve their Score - Some users may invest the time to improve their setup and thereby displace on of the top 4. This provides obvious benefits to the network.
+4. Turn their hotspot off/repurpose it - While not as preferable to item 1 or 2, it does help to achieve the same result in that hosts who are not providing valuable coverage turning off will increase the incentives for those who choose to deploy in less saturated areas.
+5. Just ignore it - Similar to 4. These users are not earning rewards, those rewards are now increasing the pool available and providing extra incentives for those deploying in less saturated areas.
 
 ## Unresolved Questions
 
