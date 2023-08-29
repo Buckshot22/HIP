@@ -11,7 +11,7 @@
 
 This HIP proposes to- 
 1. Establish a scoring metric based on a number of criteria to provide a coverage score for IOT Hotspots.
-2. Set a hard limit per Res8 Hex (or equivalent K-Ring), Hotspots within that Hex will be ranked based on the 'Coverage Score'. Those below the cut off will not be rewarded.
+2. Set a hard limit per Res8 Hex (or equivalent K-Ring), Hotspots within that Hex will be ranked based on the 'Coverage Score'. Those below the cut off will not be rewarded. **Needs explanation of K-Rings if we go that route
 3. Increase witnesses per beacon to 25. 
 
 <!-- Read the content requests in all sections before starting to write any section. -->
@@ -35,7 +35,7 @@ The metrics used to measure the 'Coverage Score' effectively create an 'SLA' whi
 
 **Coverage Score**
 
-The Coverage Score will be determined by the following metrics in weighted order
+The Coverage Score will be determined by the following metrics in weighted order ** Need to provide formula and weightings
 
 - Number of unique valid witnesses over the past 14 days
 - Measure of uptime over the previous 14 days
@@ -73,7 +73,8 @@ In the cases that this HIP is targeting, where you have a city area filled with 
 The HIP authors believe that by introducing these changes, it will force improvements to the spread of coverage while maintaining sufficiant redundancy for the network. By improving coverage and providing an SLA score it will improve dependability in the eyes of potential data customers.
 
 It is expected that there will be pushback from those who stand to be caught out by this HIP due to providing superfluous coverage which is not adding value to the network.
-It is the authors belief that Proof Of Coverage rewards should only be provided to those providing valuable coverage. Providing lower level coverage to an area as small as a Res8 that already has 4 better performing hotspots does not add any value to the network.
+It is the authors belief that Proof Of Coverage rewards should only be provided to those providing valuable coverage. Providing lower level coverage to an area as small as a Res8 that already has better performing hotspots does not add any value to the network.
+By not rewarding the superfluous hotspots the incentive is increased to deploy hotspots to underserved areas ** Needs current data, preferably the number of IOT per month currenly awarded to hotspots that are in Res8's that have more than 2 and are not in the top 2.
 
 Hotspot Operators who are negatively affected by this change are likely to-
 1. Move their hotspot - More likely to happen if it is a hosted unit, the preferred behaviour is that units are moved to a less saturated area.
