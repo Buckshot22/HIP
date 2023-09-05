@@ -35,7 +35,7 @@ The metrics used to measure the 'Coverage Score' effectively create an 'SLA' whi
 
 **Coverage Score**
 
-The Coverage Score will be determined by the following metrics in weighted order ** Need to provide formula and weightings
+The Coverage Score will be determined by the following metrics in weighted order ** Needs modelling. Numbers are not intended to remain stagnent and should be adjusted as required to ensure optimal effects.
 
 - Number of unique witnesses within 20km over the past 14 days *500
 - Measure of uptime over the previous 14 days (number of beacons over 14 days? or something better) *100
