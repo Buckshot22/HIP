@@ -37,11 +37,11 @@ The metrics used to measure the 'Coverage Score' effectively create an 'SLA' whi
 
 The Coverage Score will be determined by the following metrics in weighted order ** Need to provide formula and weightings
 
-- Number of unique valid witnesses over the past 14 days
-- Measure of uptime over the previous 14 days
-- Average response time over the previous 14 days
-- Length of time that the unit has remained in location
-- HNT/IOT staking 
+- Number of unique witnesses within 20km over the past 14 days *500
+- Measure of uptime over the previous 14 days (number of beacons over 14 days? or something better) *100
+- Average response time over the previous 14 days (500 - average response time in ms) *50
+- Length of time that the unit has remained in location (time since last assertion in days) *10
+- HNT/IOT staking (HNT staked *2 + IOT staked *1)
 
 **Res8 Limit**
 
