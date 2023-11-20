@@ -41,7 +41,7 @@ The Coverage Score will be determined by the following metrics in weighted order
 - Measure of uptime over the previous 14 days (number of beacons over 14 days? or something better) *100
 - Average response time over the previous 14 days (500 - average response time in ms) *50
 - Length of time that the unit has remained in location (time since last assertion in days) *10
-- HNT/IOT staking (HNT staked *2 + IOT staked *1)
+
 
 **Res8 Limit**
 
